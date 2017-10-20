@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Property Form</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/registration.css}" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<form th:action="@{/admin/home}" method="get">
+		<button class="btn btn-md btn-warning btn-block" type="Submit">Go To Home Page</button>
+	</form>	
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<form autocomplete="off" action="#" th:action="@{/admin/house}"
+					th:object="${house}" method="post" class="form-horizontal"
+					role="form">
+					<h2>New Property</h2>
+					
+					<div class="form-group">
+						<div class="col-sm-9">
+							<input type="text" th:field="*{address}"
+								placeholder="123 John Street" class="form-control" /> <label
+								class="validation-message"></label>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<div class="col-sm-9">
+							<input type="number" th:field="*{bedrooms}"
+								placeholder="3" class="form-control" /> <label
+								class="validation-message"></label>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<div class="col-sm-9">
+							<input type="number" th:field="*{washrooms}"
+								placeholder="1" class="form-control" /> <label
+								class="validation-message"></label>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<div class="col-sm-9">
+							<input type="number" th:field="*{area}"
+								placeholder="4000" class="form-control" /> <label
+								class="validation-message"></label>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<div class="col-sm-9">
+							<input type="number" th:field="*{yearBuilt}"
+								placeholder="2004" class="form-control" /> <label
+								class="validation-message"></label>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-9">
+							<button type="submit" class="btn btn-primary btn-block">Construct new Property</button>
+						</div>
+					</div>
+					
+					<span th:utext="${successMessage}"></span>
+					
+				</form>
+				
+				<p th:text="'Address: ' + ${houseAddress}" />
+				<p th:text="'Bedrooms: ' + ${houseBedrooms}" />				
+				<p th:text="'Washrooms: ' + ${houseWashrooms}" />		
+				<p th:text="'Area: ' + ${houseArea}" />				
+				<p th:text="'YearBuilt: ' + ${houseYear}" />				
+								
+				
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

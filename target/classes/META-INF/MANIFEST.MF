@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: demo
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: csunoser
+Implementation-Vendor-Id: com.liveasy
+Build-Jdk: 1.8.0_144
+Implementation-URL: http://projects.spring.io/spring-boot/Liveasy/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

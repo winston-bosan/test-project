@@ -1,0 +1,14 @@
+{
+  "groups": [{
+    "name": "storage",
+    "type": "com.liveasy.storage.StorageProperties",
+    "sourceType": "com.liveasy.storage.StorageProperties"
+  }],
+  "properties": [{
+    "name": "storage.location",
+    "type": "java.lang.String",
+    "description": "Folder location for storing files",
+    "sourceType": "com.liveasy.storage.StorageProperties"
+  }],
+  "hints": []
+}
